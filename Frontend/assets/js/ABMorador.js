@@ -8,7 +8,7 @@ let oradores =[];
 const setOradores = (nuevosOradores) => {
   oradores = nuevosOradores;
   };
-//CON ESTA FUNCIÓN GUARDO EN EL ARRAY LOS DATOS DE LA DB
+
 
 function listarNuevosOradores() {
   const respuesta = fetch(`http://localhost:8080/wep-app/controller`);
