@@ -11,7 +11,7 @@ const setOradores = (nuevosOradores) => {
 
 
 function listarNuevosOradores() {
-  const respuesta = fetch(`http://localhost:8080/wep-app/controller`);
+  const respuesta = fetch(`http://localhost:8080/wep-app/controller`, {method:'GET'});
   respuesta
       .then(response => response.json())
       .then(oradoresDesdeBD => {
@@ -35,9 +35,7 @@ const setId = (id) => {
     document.getElementById('modalMail').value = orador.mail;
     document.getElementById('modalTema').value = orador.tema;
   
-    // Para mostrar el modal
-    //const miModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-    //miModal.show();
+  
 }       
     // Función para guardar cambios del orador desde el modal
     const guardarCambiosOrador = () => {
@@ -119,7 +117,7 @@ const NuevoOrador =()=>{
 
 function listarOradores() {
 //DEFINO EL CONTROLADOR DESDE DONDE SE OBTENDRÁN LOS DATOS
-const respuesta = fetch(`http://localhost:8080/wep-app/controller`);
+const respuesta = fetch(`http://localhost:8080/wep-app/controller`,{method:'GET'});
 
 //2 invocar
 respuesta
